@@ -1,0 +1,11 @@
+python/
+pycharm + all/
+django/
+Procfile
+apps/foodcards/__pycache__/
+apps/foodcards/migrations/__pycache__/
+apps/basket/__pycache__/
+apps/basket/migrations/__pycache__/
+emenu/__pycache__/
+emenu/settings.py
+requirements.txt/
