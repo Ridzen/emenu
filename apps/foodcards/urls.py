@@ -5,7 +5,7 @@ PostAPIView, PostRetrieveAPIView, PostCategoriesAPIView, PostCategoryRetrieveAPI
 )
 
 urlpatterns = [
-    path('foodcards', PostAPIView.as_view()),
+    path('', PostAPIView.as_view()),
     path('<int:pk>/', PostRetrieveAPIView.as_view()),
     path('categories/', PostCategoriesAPIView.as_view()),
     path('categories/<int:pk>/', PostCategoryRetrieveAPIView.as_view()),
