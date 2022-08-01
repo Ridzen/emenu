@@ -45,6 +45,9 @@ INSTALLED_APPS = [
     'django_filters',
     'corsheaders',
     'drf_yasg',
+    'rest_framework_swagger',
+    
+
 
     # my apps
     'apps.foodcards',
