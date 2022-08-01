@@ -16,9 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework_swagger.views import get_swagger_view
-from apps.foodcards import urls
-from .yasg import urlpatterns as doc_urls
-from . import settings
+# from apps.foodcards import urls
+# from .yasg import urlpatterns as doc_urls
+# from . import settings
 
 scheme_view = get_swagger_view(title='Pastebin API')
 
