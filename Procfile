@@ -1,1 +1,1 @@
-web: gunicorn emenu.wsgi --log-file -
+web: gunicorn emenu.wsgi
