@@ -12,7 +12,7 @@ from apps.foodcards.serializer import CardsSerializer, CardsCategorySerializer
 
 class PostAPIView(generics.ListCreateAPIView):
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
-    filterset_fields = ['in_basket']
+    filterset_fields = ['category', 'price']
     serializer_class = CardsSerializer
     search_fields = ['title']
     ordering_fields = ['created_at']

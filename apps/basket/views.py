@@ -12,7 +12,6 @@ from apps.basket.serializer import BasketSerializer
 
 class BasketAPIView(generics.ListCreateAPIView):
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
-    filterset_fields = ['in_basket', 'tag']
     serializer_class = BasketSerializer
     search_fields = ['title']
     ordering_fields = ['created_at']

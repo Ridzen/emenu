@@ -11,6 +11,19 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
 from pathlib import Path
+# import django_heroku
+
+# import cloudinary
+# import cloudinary.uploader
+# import cloudinary.api
+
+# CLOUDINARY_STORAGE
+# CLOUDINARY_STORAGE = {
+#         'CLOUD_NAME': 'productions',
+#         'API_KEY': '851917814973718',
+#         'API_SECRET': 'K6cjG18m05MeHMUcKiEvk73q38Q'
+#     }
+# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -46,8 +59,6 @@ INSTALLED_APPS = [
     'corsheaders',
     'drf_yasg',
     'rest_framework_swagger',
-    
-
 
     # my apps
     'apps.foodcards',
@@ -114,7 +125,7 @@ CORS_ALLOW_METHODS = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / 'db.new_sqlite3',
     }
 }
 
@@ -170,3 +181,6 @@ CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.j
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+#
+# django_heroku.settings(locals())
+
