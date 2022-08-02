@@ -9,6 +9,8 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
+import django_heroku
+
 import os
 from pathlib import Path
 # import django_heroku
@@ -24,6 +26,7 @@ from pathlib import Path
 #         'API_SECRET': 'K6cjG18m05MeHMUcKiEvk73q38Q'
 #     }
 # DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -181,6 +184,11 @@ CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.j
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+<<<<<<< HEAD
 #
 # django_heroku.settings(locals())
 
+=======
+
+django_heroku.settings(locals())
+>>>>>>> 7d96a8af045c7a522c5a02b632c793eb2e0adb90
