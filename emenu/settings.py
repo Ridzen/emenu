@@ -13,17 +13,17 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 import os
 from pathlib import Path
 
-# import cloudinary
-# import cloudinary.uploader
-# import cloudinary.api
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 # CLOUDINARY_STORAGE
-# CLOUDINARY_STORAGE = {
-#         'CLOUD_NAME': 'productions',
-#         'API_KEY': '851917814973718',
-#         'API_SECRET': 'K6cjG18m05MeHMUcKiEvk73q38Q'
-#     }
-# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+CLOUDINARY_STORAGE = {
+        'CLOUD_NAME': 'productions',
+        'API_KEY': '851917814973718',
+        'API_SECRET': 'K6cjG18m05MeHMUcKiEvk73q38Q'
+    }
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -60,6 +60,10 @@ INSTALLED_APPS = [
     'corsheaders',
     'drf_yasg',
     'rest_framework_swagger',
+
+    # 'parler',
+    'cloudinary',
+    'cloudinary_storage',
 
     # my apps
     'apps.foodcards',
@@ -101,15 +105,6 @@ WSGI_APPLICATION = 'emenu.wsgi.application'
 CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOW_CREDENTIALS = True
-
-CORS_ALLOW_METHODS = [
-    'DELETE',
-    'GET',
-    'OPTIONS',
-    'PATCH',
-    'POST',
-    'PUT',
-]
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
@@ -169,6 +164,7 @@ CKEDITOR_UPLOAD_PATH = "ckeditor/"
 CKEDITOR_IMAGE_BACKEND = "pillow"
 CKEDITOR_UPLOAD_SLUGIFY_FILENAME = False
 CKEDITOR_RESTRICT_BY_USER = True
+CKEDITOR_ALLOW_NONIMAGE_FILES = False
 CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
 
 # Default primary key field type
