@@ -17,14 +17,6 @@ import cloudinary
 import cloudinary.uploader
 import cloudinary.api
 
-# CLOUDINARY_STORAGE
-CLOUDINARY_STORAGE = {
-        'CLOUD_NAME': 'productions',
-        'API_KEY': '851917814973718',
-        'API_SECRET': 'K6cjG18m05MeHMUcKiEvk73q38Q'
-    }
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -41,6 +33,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+if not DEBUG:
+
+    CLOUDINARY_STORAGE = {
+            'CLOUD_NAME': 'productions',
+            'API_KEY': '851917814973718',
+            'API_SECRET': 'K6cjG18m05MeHMUcKiEvk73q38Q'
+        }
+    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Application definition
 
