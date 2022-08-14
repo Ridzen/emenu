@@ -8,10 +8,14 @@ from apps.foodcards.models import Cards
 class Basket(models.Model):
     """Модель Корзины"""
 
-    list_food = models.ForeignKey(to=Cards, on_delete=models.CASCADE, related_name='name',
-                                  default=None, null=True)
-    full_price = models.ForeignKey(to=Cards, on_delete=models.CASCADE, related_name='full_price',
-                                  default=None, null=True)
+    list_food = models.ForeignKey(
+        to=Cards, on_delete=models.CASCADE, related_name='name',
+                                  default=None, null=True
+    )
+    full_price = models.ForeignKey(
+        to=Cards, on_delete=models.CASCADE, related_name='full_price',
+                                  default=None, null=True
+    )
     comments = models.TextField()
 
     class Meta:

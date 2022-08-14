@@ -7,9 +7,13 @@ class CardsCategories(models.Model):
 
     """Модель для категории карточек еды"""
 
-    title = models.CharField(max_length=255, unique=False)
+    title = models.CharField(
+        max_length=255, unique=False
+    )
     description = RichTextUploadingField()
-    price = models.DecimalField(decimal_places=10, max_digits=15, null=True, blank=True)
+    price = models.DecimalField(
+        decimal_places=10, max_digits=15, null=True, blank=True
+    )
 
     class Meta:
         verbose_name_plural = 'Категории постов'
@@ -23,17 +27,25 @@ class Cards(models.Model):
 
     """ Модель для Карточек Еды """
 
-    title = models.CharField(max_length=255)
-    image = models.ImageField(help_text="An image or logo for this Card (optional)",
-                              blank=True, null=True)
+    title = models.CharField(
+        max_length=255
+    )
+    image = models.ImageField(
+        help_text="An image or logo for this Card (optional)",
+                              blank=True, null=True
+    )
     description = RichTextUploadingField()
-    price = models.DecimalField(decimal_places=10, max_digits=15, null=True, blank=True)
+    price = models.DecimalField(
+        decimal_places=10, max_digits=15, null=True, blank=True
+    )
     amount = models.PositiveIntegerField()
     category = models.ForeignKey(
         to=CardsCategories, on_delete=models.CASCADE, related_name='cards',
         default=None, null=True
     )
-    in_basket = models.BooleanField(default=False)
+    in_basket = models.BooleanField(
+        default=False
+    )
 
     class Meta:
         db_table = 'cards_db'
